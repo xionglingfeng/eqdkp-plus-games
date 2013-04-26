@@ -24,7 +24,7 @@ if(!class_exists('sto')) {
 	class sto extends game_generic {
 		public static $shortcuts = array();
 		protected $this_game	= 'sto';
-		protected $types		= array('classes', 'races', 'factions');
+		protected $types		= array('classes', 'races');
 		public $icons			= array('classes', 'classes_big', 'races', 'events');
 		protected $classes		= array();
 		protected $races		= array();
@@ -36,7 +36,7 @@ if(!class_exists('sto')) {
 		protected $lang_file	= array();
 		protected $path			= false;
 		public $lang			= false;
-		public $version			= '0.1';
+		public $version			= '0.2';
 
 		/**
 		* Initialises filters
@@ -51,6 +51,12 @@ if(!class_exists('sto')) {
 				1 => '#c69f44',
 				2 => '#256895',
 				3 => '#aa251f',
+				4 => '#c69f44',
+				5 => '#256895',
+				6 => '#aa251f',
+				7 => '#c69f44',
+				8 => '#256895',
+				9 => '#aa251f',
 		);
 			$info['aq'] = array();
 

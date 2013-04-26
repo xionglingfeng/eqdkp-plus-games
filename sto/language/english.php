@@ -22,9 +22,15 @@ if ( !defined('EQDKP_INC') ){
 $english_array =  array(
 	'classes' => array(
 		0	=> 'Unknown',
-		1	=> 'Engineering',
-		2	=> 'Science',
-		3	=> 'Tactical',
+		1	=> 'FED-Engineering',
+		2	=> 'FED-Science',
+		3	=> 'FED-Tactical',
+		4	=> 'KDF-Engineering',
+		5	=> 'KDF-Science',
+		6	=> 'KDF-Tactical',
+		7	=> 'RR-Engineering',
+		8	=> 'RR-Science',
+		9	=> 'RR-Tactical',
 	),
 	'races' => array(
 		//Federation
@@ -53,11 +59,10 @@ $english_array =  array(
 		'Liberated Borg',
 		'Alien',
 		'Trill',
+		'Romulan',
+		'Reman',
 	),
-	'factions' => array(
-		'Federation',
-		'Klingon Empire',
-	),
+
 	'lang' => array(
 		'sto' => 'Star Trek Online',
 	),
