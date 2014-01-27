@@ -26,17 +26,17 @@ if(!class_exists('ffxiv')) {
 		public static $shortcuts = array();
 		protected $this_game	= 'ffxiv';
 		protected $types		= array('classes', 'races', 'factions', 'filters');
-		public $icons			= array('classes', 'classes_big', 'events', 'races', 'ranks');
+		public $icons			= array('classes', 'classes_big', 'events', 'races', 'ranks', 'roles');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $filters		= array();
-		public $langs			= array('english');
+		public $langs			= array('english', 'german');
 
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= '';
 		public $lang			= false;
-		public $version			= '1.1';
+		public $version			= '2.15';
 
 		/**
 		* Initialises filters
@@ -55,9 +55,9 @@ if(!class_exists('ffxiv')) {
 				}
 				$this->filters[$lang] = array_merge($this->filters[$lang], array(
 					array('name' => '-----------', 'value' => false),
-					array('name' => $this->glang('tank', true, $lang), 'value' => 'class:10,11'),
-					array('name' => $this->glang('support', true, $lang), 'value' => 'class:1,3,5,6,14,16,17,20'),
-					array('name' => $this->glang('damage_dealer', true, $lang), 'value' => 'class:2,4,7,8,9,12,13,18,19'),
+					array('name' => $this->glang('tank', true, $lang), 'value' => 'class:2,5'),
+					array('name' => $this->glang('support', true, $lang), 'value' => 'class:7,9'),
+					array('name' => $this->glang('damage_dealer', true, $lang), 'value' => 'class:1,3,4,6,8'),
 				));
 			}
 		}
@@ -78,18 +78,9 @@ if(!class_exists('ffxiv')) {
 				4	=> '#808080',
 				5	=> '#808080',
 				6	=> '#808080',
-				7	=> '#808080',
+				7	=> '#009900',
 				8	=> '#808080',
-				9	=> '#808080',
-				10	=> '#808080',
-				11	=> '#808080',
-				12	=> '#808080',
-				13	=> '#808080',
-				14	=> '#808080',
-				15	=> '#808080',
-				16	=> '#808080',
-				17	=> '#808080',
-				18	=> '#808080',
+				9	=> '#009900',
 			);
 
 			$info['aq'] = array();
