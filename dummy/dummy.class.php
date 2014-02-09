@@ -26,8 +26,7 @@ if(!class_exists('dummy')) {
 		protected $types		= array();	// which information are stored?
 		public $icons			= array();	// which icons do we have?
 		protected $classes		= array();
-		protected $roles		= array();
-		protected $races		= array();															// for each type there must be the according var
+		protected $roles		= array();														// for each type there must be the according var
 		protected $factions		= array();															// and the according function: load_$type
 		protected $filters		= array();
 		protected $realmlist	= array();
@@ -38,6 +37,7 @@ if(!class_exists('dummy')) {
 		protected $path			= '';
 		public $lang			= false;
 		public $version			= '0.1.0';
+		protected $class_dependencies = array();
 
 		public function __construct() {
 			parent::__construct();
@@ -50,9 +50,6 @@ if(!class_exists('dummy')) {
 		 * @return array
 		 */
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-			$info['class_color'] = array();
-
 			//config-values
 			$info['config'] = array();
 
