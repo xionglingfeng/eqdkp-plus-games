@@ -21,25 +21,20 @@ if ( !defined('EQDKP_INC') ){
 }
 $english_array = array(
 	'classes' => array(
-		0 => 'Unknown',
-		1 => 'Barbarian',
-		2 => 'Demon Hunter',
-		3 => 'Monk',
-		4 => 'Witch Doctor',
-		5 => 'Wizard',	
+		0	=> 'Unknown',
+		1	=> 'Barbarian',
+		2	=> 'Demon Hunter',
+		3	=> 'Monk',
+		4	=> 'Witch Doctor',
+		5	=> 'Wizard',
 	),
 	'roles' => array(
-		1 => array(4),
-		2 => array(2,4,5),
-		3 => array(1,3),
+		1	=> 'Healer',
+		2	=> 'Range',
+		3	=> 'Melee',
 	),
 	'lang' => array(
-		'diablo3' => 'Diablo 3',
-		
-		// Roles
-		'role1'						=> 'Healer',
-		'role2'						=> 'Range',
-		'role3'						=> 'Melee',
+		'diablo3'					=> 'Diablo 3',
 	),
 );
 ?>

@@ -22,46 +22,40 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('diablo3')) {
 	class diablo3 extends game_generic {
+		public $version			= '1.0';
 		protected $this_game	= 'diablo3';
 		protected $types		= array('classes');
-		public $icons			= array('classes', 'classes_big');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
-		protected $filters		= array();
 		public $langs			= array('english', 'german');
+
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> false
+			),
+		);
+		
+		public $default_roles = array(
+			1	=> array(4),
+			2	=> array(2,4,5),
+			3	=> array(1,3),
+		);
 
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= '';
 		public $lang			= false;
-		public $version			= '1.0';
-
-		/**
-		* Initialises filters
-		*
-		* @param array $langs
-		*/
-		protected function load_filters($langs){
-			
-		}
 
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-			/*
-			
-			$info['class_color'] = array(
-				1 => '#80FF00',
-				2 => '#FFFFFF',
-				3 => '#FFFFFF',
-				4 => '#4080FF',
-				5 => '#80FF00',
-				6 => '#7d5ebc',
-				7 => '#7d5ebc',
-				8 => '#4080FF',
-			);
-
-			
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
 			if($install){
 			}*/

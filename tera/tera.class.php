@@ -22,21 +22,59 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('tera')) {
 	class tera extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '0.1';
 		protected $this_game	= 'tera';
-		protected $types		= array('classes', 'races', 'factions', 'filters');
-		public $icons			= array('classes', 'races');
+		protected $types		= array('classes', 'races', 'filters', 'roles');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
 		protected $filters		= array();
 		public $langs			= array('english', 'german');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> false
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> false
+			),
+		);
+		
+		public $default_roles = array(
+			1 => array(3),			// defence
+			2 => array(2, 6, 8),	// melee offense
+			3 => array(1, 7),		// ranged offense
+			4 => array(4, 5)		// support
+		);
+		
+		protected $class_colors = array(
+			1	=> '#E18FF1',
+			2	=> '#C97840',
+			3	=> '#69444B',
+			4	=> '#6CB6CF',
+			5	=> '#5B8C79',
+			6	=> '#91BC51',
+			7	=> '#E68C84',
+			8	=> '#DFBA74',
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= false;
 		public $lang			= false;
-		public $version			= '0.1';
+		
 
 		/**
 		* Initialises filters
@@ -56,17 +94,6 @@ if(!class_exists('tera')) {
 			}
 		}
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-			$info['class_color'] = array(
-				1      	=> '#E18FF1',
-				2    	=> '#C97840',
-				3     	=> '#69444B',
-				4    	=> '#6CB6CF',
-				5     	=> '#5B8C79',
-				6    	=> '#91BC51',
-				7    	=> '#E68C84',
-				8    	=> '#DFBA74',
-			);
 			$info['aq'] = array();
 
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install

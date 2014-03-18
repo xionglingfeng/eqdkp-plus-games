@@ -23,20 +23,95 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('ffxiv')) {
 	class ffxiv extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '2.15';
 		protected $this_game	= 'ffxiv';
 		protected $types		= array('classes', 'races', 'factions', 'filters');
-		public $icons			= array('classes', 'classes_big', 'events', 'races', 'ranks', 'roles');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $filters		= array();
 		public $langs			= array('english', 'german');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'faction',
+				'type'		=> 'factions',
+				'admin' 	=> true,
+				'decorate'	=> false,
+				'parent'	=> false,
+			),
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> array(
+					'faction' => array(
+						'gridania'	=> 'all',
+						'limsa'		=> 'all',
+						'Uldah'		=> 'all',
+					),
+				),
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> array(
+					'race' => array(
+						0 	=> 'all',		// Unknown
+						1 	=> 'all',		// Elezen
+						2 	=> 'all',		// Roegadyn
+						3 	=> 'all',		// Hyuran
+						4 	=> 'all',		// Miqote
+						5 	=> 'all',		// Lalafell
+					),
+				),
+			),
+		);
+		
+		protected $class_colors = array(
+			0	=> '#808080',
+			1	=> '#808080',
+			2	=> '#808080',
+			3	=> '#808080',
+			4	=> '#808080',
+			5	=> '#808080',
+			6	=> '#808080',
+			7	=> '#009900',
+			8	=> '#808080',
+			9	=> '#009900',
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= '';
 		public $lang			= false;
-		public $version			= '2.15';
+
+		public function profilefields(){
+			$xml_fields = array(
+				'gender'	=> array(
+					'type'			=> 'dropdown',
+					'category'		=> 'character',
+					'lang'			=> 'uc_gender',
+					'options'		=> array('Male' => 'uc_male', 'Female' => 'uc_female'),
+					'undeletable'	=> true,
+					'tolang'		=> true,
+				),
+				'guild'	=> array(
+					'type'			=> 'text',
+					'category'		=> 'character',
+					'lang'			=> 'uc_guild',
+					'size'			=> 40,
+					'undeletable'	=> true,
+				),
+			);
+			return $xml_fields;
+		}
 
 		/**
 		* Initialises filters
@@ -70,18 +145,6 @@ if(!class_exists('ffxiv')) {
 		*/
 
 		public function get_OnChangeInfos($install=false){
-			$info['class_color'] = array(
-				0	=> '#808080',
-				1	=> '#808080',
-				2	=> '#808080',
-				3	=> '#808080',
-				4	=> '#808080',
-				5	=> '#808080',
-				6	=> '#808080',
-				7	=> '#009900',
-				8	=> '#808080',
-				9	=> '#009900',
-			);
 
 			$info['aq'] = array();
 
@@ -92,5 +155,4 @@ if(!class_exists('ffxiv')) {
 		}
 	}
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_ffxiv', ffxiv::$shortcuts);
 ?>

@@ -22,21 +22,51 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('sto')) {
 	class sto extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '0.2';
 		protected $this_game	= 'sto';
 		protected $types		= array('classes', 'races');
-		public $icons			= array('classes', 'classes_big', 'races', 'events');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
-		protected $filters		= array();
 		public $langs			= array('english', 'german');
+
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> false
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> false
+			),
+		);
+
+		protected $class_colors = array(
+			1	=> '#c69f44',
+			2	=> '#256895',
+			3	=> '#aa251f',
+			4	=> '#c69f44',
+			5	=> '#256895',
+			6	=> '#aa251f',
+			7	=> '#c69f44',
+			8	=> '#256895',
+			9	=> '#aa251f',
+		);
 
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= false;
 		public $lang			= false;
-		public $version			= '0.2';
 
 		/**
 		* Initialises filters
@@ -46,18 +76,6 @@ if(!class_exists('sto')) {
 		protected function load_filters($langs) {}
 
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-			$info['class_color'] = array(
-				1 => '#c69f44',
-				2 => '#256895',
-				3 => '#aa251f',
-				4 => '#c69f44',
-				5 => '#256895',
-				6 => '#aa251f',
-				7 => '#c69f44',
-				8 => '#256895',
-				9 => '#aa251f',
-		);
 			$info['aq'] = array();
 
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
@@ -67,5 +85,4 @@ if(!class_exists('sto')) {
 		}
 	}
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_sto', sto::$shortcuts);
 ?>

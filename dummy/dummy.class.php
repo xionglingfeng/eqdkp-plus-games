@@ -22,26 +22,29 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('dummy')) {
 	class dummy extends game_generic {
+		public $version			= '0.1.0';
 		protected $this_game	= 'dummy';
-		protected $types		= array();	// which information are stored?
-		public $icons			= array();	// which icons do we have?
+		protected $types		= array();						// which information are stored?
 		protected $classes		= array();
-		protected $roles		= array();														// for each type there must be the according var
-		protected $factions		= array();															// and the according function: load_$type
+		protected $roles		= array();						// for each type there must be the according var
+		protected $factions		= array();						// and the according function: load_$type
 		protected $filters		= array();
 		protected $realmlist	= array();
 		protected $professions	= array();
-		public $langs			= array('english', 'german');					// in which languages do we have information?
+		public $langs			= array('english', 'german');	// in which languages do we have information?
+
+		protected $class_dependencies = array();
+		public $default_roles = array();
+		protected $class_colors = array();
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= '';
 		public $lang			= false;
-		public $version			= '0.1.0';
-		protected $class_dependencies = array();
 
 		public function __construct() {
 			parent::__construct();
-		}	
+		}
 		
 		/**
 		 * Returns Information to change the game
@@ -61,6 +64,14 @@ if(!class_exists('dummy')) {
 		
 		public function load_filters($langs){
 			return array();
+		}
+
+		public function profilefields(){
+			// array with fields
+		}
+
+		public function admin_settings() {
+			// array with admin fields
 		}
 
 	}#class

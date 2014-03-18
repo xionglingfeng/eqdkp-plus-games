@@ -22,46 +22,56 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('guildwars2')) {
 	class guildwars2 extends game_generic {
+		public $version			= '0.1';
 		protected $this_game	= 'guildwars2';
 		protected $types		= array('classes', 'races');
-		public $icons			= array('classes', 'races', 'events', 'classes_big');
 		protected $classes		= array();
 		protected $races		= array();
-		protected $factions		= array();
-		protected $filters		= array();
 		public $langs			= array('english', 'german');
+
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> false
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> array(
+					'race' => array(
+						0 	=> 'all',		// Unknown
+						1 	=> 'all',		// Sylvari
+						2 	=> 'all',		// Norn
+						3 	=> 'all',		// Charr
+						4 	=> 'all',		// Asura
+						5 	=> 'all',		// Human
+					),
+				),
+			),
+		);
+
+		public $default_roles = array(
+			1	=> array(8,7,4,3),
+			2	=> array(1,2,3,4,5,6,7,8),
+			3	=> array(1,8,5,7,4,2,6,3),
+			4	=> array(1,8,5,7,4,2,6,3)
+		);
 
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= '';
 		public $lang			= false;
-		public $version			= '0.1';
-
-				/**
-		* Initialises filters
-		*
-		* @param array $langs
-		*/
-		protected function load_filters($langs){
-			
-		}
 
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-			/*
-			
-			$info['class_color'] = array(
-				1 => '#80FF00',
-				2 => '#FFFFFF',
-				3 => '#FFFFFF',
-				4 => '#4080FF',
-				5 => '#80FF00',
-				6 => '#7d5ebc',
-				7 => '#7d5ebc',
-				8 => '#4080FF',
-			);
-
-			
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
 			if($install){
 			}*/

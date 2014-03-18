@@ -21,38 +21,32 @@ if ( !defined('EQDKP_INC') ){
 }
 $german_array = array(
 	'classes' => array(
-		0 => 'Unbekannt',
-		1 => 'Elementarmagier',
-		2 => 'Krieger',
-		3 => 'Waldläufer',
-		4 => 'Nekromant',
-		5 => 'Wächter',
-		6 => 'Dieb',
-		7 => 'Mesmer',
-		8 => 'Ingenieur',
+		0	=> 'Unbekannt',
+		1	=> 'Elementarmagier',
+		2	=> 'Krieger',
+		3	=> 'Waldläufer',
+		4	=> 'Nekromant',
+		5	=> 'Wächter',
+		6	=> 'Dieb',
+		7	=> 'Mesmer',
+		8	=> 'Ingenieur',
 	),
 	'races' => array(
-		'Unknown',
-		'Sylvari',
-		'Norn',
-		'Charr',
-		'Asura',
-		'Menschen',
+		0	=> 'Unknown',
+		1	=> 'Sylvari',
+		2	=> 'Norn',
+		3	=> 'Charr',
+		4	=> 'Asura',
+		5	=> 'Menschen',
 	),
 	'roles' => array(
-		1 => array(8,7,4,3),
-		2 => array(1,2,3,4,5,6,7,8),
-		3 => array(1,8,5,7,4,2,6,3),
-		4 => array(1,8,5,7,4,2,6,3)
+		1 => 'Heiler',
+		2 => 'Tank',
+		3 => 'DD Fernkampf',
+		4 => 'DD Nahkampf',
 	),
 	'lang' => array(
-		'guildwars2' => 'Guildwars 2',
-		
-		// Roles
-		'role1'						=> 'Heiler',
-		'role2'						=> 'Tank',
-		'role3'						=> 'DD Fernkampf',
-		'role4'						=> 'DD Nahkampf',
+		'guildwars2'				=> 'Guildwars 2',
 	),
 );
 ?>

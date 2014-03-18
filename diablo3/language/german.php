@@ -21,25 +21,20 @@ if ( !defined('EQDKP_INC') ){
 }
 $german_array = array(
 	'classes' => array(
-		0 => 'Unbekannt',
-		1 => 'Barbar',
-		2 => 'Dämonenjäger',
-		3 => 'Mönch',
-		4 => 'Hexendoktor',
-		5 => 'Zauberer',	
+		0	=> 'Unbekannt',
+		1	=> 'Barbar',
+		2	=> 'Dämonenjäger',
+		3	=> 'Mönch',
+		4	=> 'Hexendoktor',
+		5	=> 'Zauberer',
 	),
 	'roles' => array(
-		1 => array(4),
-		2 => array(2,4,5),
-		3 => array(1,3),
+		1	=> 'Heiler',
+		2	=> 'Fernkampf',
+		3	=> 'Nahkampf',
 	),
 	'lang' => array(
-		'diablo3' => 'Diablo 3',
-		
-		// Roles
-		'role1'						=> 'Heiler',
-		'role2'						=> 'Fernkampf',
-		'role3'						=> 'Nahkampf',
+		'diablo3'					=> 'Diablo 3',
 	),
 );
 ?>

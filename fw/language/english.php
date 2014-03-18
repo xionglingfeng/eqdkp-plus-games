@@ -33,37 +33,28 @@ $english_array =  array(
 	),
 
 	'races' => array(
-				'Unknown',
-				'Dwarf',
-				'Elf',
-				'Human',
-				'Kindred',
-				'Stoneman',
-				'Lycan',
-	),
-	'factions' => array(
-		'Standard',
+		0	=> 'Unknown',
+		1	=> 'Dwarf',
+		2	=> 'Elf',
+		3	=> 'Human',
+		4	=> 'Kindred',
+		5	=> 'Stoneman',
+		6	=> 'Lycan',
 	),
 	'roles' => array(
-		1 => array(6),
-		2 => array(1,2),
-		3 => array(3,4,5,7),
-		4 => array(8),
+		1	=> 'Healer',
+		2	=> 'Tank',
+		3	=> 'Damage Dealer',
+		4	=> 'Supporter',
 	),
 	
 	'lang' => array(
-		'fw' => 'Forsaken World',
+		'fw'							=> 'Forsaken World',
 
-		'plate'	=> 'Plate',
-		'heavy' => 'Heavy',
-		'light' => 'Cloth',	
-		'medium' => 'Leather',
-	
-		// Roles
-		'role1' => 'Healer',
-		'role2' => 'Tank',
-		'role3' => 'Damage Dealer',
-		'role4' => 'Supporter',
+		'plate'							=> 'Plate',
+		'heavy'							=> 'Heavy',
+		'light'							=> 'Cloth',	
+		'medium'						=> 'Leather',
 	
 		// Profile information
 		'uc_gender'						=> 'Gender',

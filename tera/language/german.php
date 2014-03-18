@@ -32,20 +32,23 @@ $german_array = array(
 		8	=> 'Krieger'
 	),
 	'races' => array(
-				'Unknown',
-				'Aman',
-				'Baraka',
-				'Castanics',
-				'Hochelfen',
-				'Menschen',
-				'Popori',
-				'Elin',
+		0	=> 'Unknown',
+		1	=> 'Aman',
+		2	=> 'Baraka',
+		3	=> 'Castanics',
+		4	=> 'Hochelfen',
+		5	=> 'Menschen',
+		6	=> 'Popori',
+		7	=> 'Elin',
 	),
-	'factions' => array(
-		'Standard',
+	'roles'	=> array(
+		1	=> 'Deffensiv',
+		2	=> 'Melee Offense',
+		3	=> 'Ranged Offense',
+		4	=> 'Unterstützer'
 	),
 	'lang' => array(
-		'tera' => 'Tera Online',
+		'tera'	=> 'Tera Online',
 	),
 );
 

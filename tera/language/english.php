@@ -31,19 +31,21 @@ $english_array =  array(
 		7	=> 'Sorcerer',
 		8	=> 'Warrior'
 	),
-
 	'races' => array(
-				'Unknown',
-				'Aman',
-				'Baraka',
-				'Castanics',
-				'High Elves',
-				'Humans',
-				'Popori',
-				'Elin',
+		0	=> 'Unknown',
+		1	=> 'Aman',
+		2	=> 'Baraka',
+		3	=> 'Castanics',
+		4	=> 'High Elves',
+		5	=> 'Humans',
+		6	=> 'Popori',
+		7	=> 'Elin',
 	),
-	'factions' => array(
-		'Default',
+	'roles'	=> array(
+		1	=> 'Defense',
+		2	=> 'Melee Offense',
+		3	=> 'Ranged Offense',
+		4	=> 'Support'
 	),
 	'lang' => array(
 		'tera' => 'Tera Online',
