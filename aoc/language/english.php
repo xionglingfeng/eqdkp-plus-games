@@ -21,37 +21,37 @@ if ( !defined('EQDKP_INC') ){
 }
 $english_array = array(
 	'classes' => array(
-		0 => 'Unknown',
-		1 => 'Assassin',
-		2 => 'Barbarian',
-		3 => 'Ranger',
-		4 => 'Conqueror',
-		5 => 'Dark Templar',
-		6 => 'Guardian',
-		7 => 'Demonologist',
-		8 => 'Herald of Xotli',
-		9 => 'Necromancer',
-		10 => 'Bear Shaman',
-		11 => 'Priest of Mitra',
-		12 => 'Tempest of Set'
+		0	=> 'Unknown',
+		1	=> 'Assassin',
+		2	=> 'Barbarian',
+		3	=> 'Ranger',
+		4	=> 'Conqueror',
+		5	=> 'Dark Templar',
+		6	=> 'Guardian',
+		7	=> 'Demonologist',
+		8	=> 'Herald of Xotli',
+		9	=> 'Necromancer',
+		10	=> 'Bear Shaman',
+		11	=> 'Priest of Mitra',
+		12	=> 'Tempest of Set'
 	),
 	'races' => array(
-		'Unknown',
-		'Aquilonian',
-		'Cimmerian',
-		'Stygian',
-		'Khitan'
+		0	=> 'Unknown',
+		1	=> 'Aquilonian',
+		2	=> 'Cimmerian',
+		3	=> 'Stygian',
+		4	=> 'Khitan'
 	),
 	'factions' => array(
-		'Good',
-		'Evil'
+		'good'	=> 'Good',
+		'evil'	=> 'Evil'
 	),
 	'lang' => array(
-		'aoc' => 'Age of Conan',
-		'rogue' => 'Rogue',
-		'soldier' => 'Soldier',
-		'mage' => 'Mage',
-		'priest' => 'Priest',
+		'aoc'				=> 'Age of Conan',
+		'rogue'				=> 'Rogue',
+		'soldier'			=> 'Soldier',
+		'mage'				=> 'Mage',
+		'priest'			=> 'Priest',
 	),
 );
 ?>

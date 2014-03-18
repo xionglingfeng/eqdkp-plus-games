@@ -22,21 +22,60 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('aoc')){
 	class aoc extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '2.1';
 		protected $this_game	= 'aoc';
 		protected $types		= array('classes', 'races', 'factions', 'filters');
-		public $icons			= array('classes', 'races', 'events');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
 		protected $filters		= array();
 		public $langs			= array('english', 'german');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'faction',
+				'type'		=> 'factions',
+				'admin' 	=> true,
+				'decorate'	=> false,
+				'parent'	=> false,
+			),
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> array(
+					'faction' => array(
+						'good'		=> 'all',
+						'evil'		=> 'all',
+					),
+				),
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> array(
+					'race' => array(
+						0 	=> 'all',		// Unknown
+						1 	=> 'all',		// Aquilonian
+						2 	=> 'all',		// Cimmerian
+						3 	=> 'all',		// Stygian
+						4 	=> 'all',		// Kithan
+					),
+				),
+			),
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= false;
 		public $lang			= false;
-		public $version			= '2.1';
 
 		/**
 		* Initialises filters
@@ -72,5 +111,4 @@ if(!class_exists('aoc')){
 		}
 	}#class
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_aoc', aoc::$shortcuts);
 ?>
