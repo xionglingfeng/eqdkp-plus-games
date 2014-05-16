@@ -52,7 +52,7 @@ if(!class_exists('dummy')) {
 		 * @param bool $install
 		 * @return array
 		 */
-		public function get_OnChangeInfos($install=false){
+		public function install($install=false){
 			//config-values
 			$info['config'] = array();
 
