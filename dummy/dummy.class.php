@@ -57,7 +57,7 @@ if(!class_exists('dummy')) {
 			$info['config'] = array();
 
 			//lets do some tweak on the templates dependent on the game
-			$info['aq'] = array();
+			
 
 			return $info;
 		}

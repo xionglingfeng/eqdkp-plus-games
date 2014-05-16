@@ -102,7 +102,7 @@ if(!class_exists('aoc')){
 			}
 		}
 
-		public function get_OnChangeInfos($install=false){
+		public function install($install=false){
 	
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
 			#if($install){

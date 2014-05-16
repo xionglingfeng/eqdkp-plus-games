@@ -71,11 +71,7 @@ if(!class_exists('guildwars2')) {
 		protected $path			= '';
 		public $lang			= false;
 
-		public function get_OnChangeInfos($install=false){
-			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
-			if($install){
-			}*/
-			return $info;
+		public function install($install=false){
 		}
 	}
 }
