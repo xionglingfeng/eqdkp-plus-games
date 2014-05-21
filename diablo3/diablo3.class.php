@@ -59,6 +59,10 @@ if(!class_exists('diablo3')) {
 
 			return $info;
 		}
+		
+		protected function load_filters($langs){
+			return array();
+		}
 	}
 }
 ?>

@@ -73,6 +73,10 @@ if(!class_exists('guildwars2')) {
 
 		public function install($install=false){
 		}
+		
+				protected function load_filters($langs){
+			return array();
+		}
 	}
 }
 ?>
