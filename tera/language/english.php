@@ -29,7 +29,8 @@ $english_array =  array(
 		5	=> 'Priest',
 		6	=> 'Slayer',
 		7	=> 'Sorcerer',
-		8	=> 'Warrior'
+		8	=> 'Warrior',
+		9	=> 'Reaper',
 	),
 	'races' => array(
 		0	=> 'Unknown',
@@ -48,7 +49,31 @@ $english_array =  array(
 		4	=> 'Support'
 	),
 	'lang' => array(
-		'tera' => 'Tera Online',
+		'tera'						=> 'Tera Online',
+
+		// events
+		'tera_event_bastion'		=> 'Bastion of Lok',
+		'tera_event_sinestral'		=> 'Sinestral Manor',
+		'tera_event_cultistrefuge'	=> "Cultist's Refuge",
+		'tera_event_necromancer'	=> 'Necromaner Tomb',
+		'tera_event_sigiladstringo'	=> 'Sigil Adstringo',
+		'tera_event_goldenlaby'		=> 'Golden Labyrinth',
+		'tera_event_akashashide'	=> "Akasha's Hideout",
+		'tera_event_acentsaravash'	=> 'Acent of Saravash',
+		'tera_event_saleronsky'		=> "Saleron's Sky Garden",
+		'tera_event_suryatis'		=> 'Suryatis Gipfel',
+		'tera_event_ebontower'		=> 'Ebon Tower',
+		'tera_event_labyterror'		=> 'Labyrinth of Terror',
+		'tera_event_kelsaiksnest'	=> "Kelsaik's Nest",
+		'tera_event_fanekaprima'	=> 'Fane of Kaprima',
+		'tera_event_balderstemple'	=> "Balder's Temple",
+		'tera_event_templetemerity'	=> 'Temple of Temerity',
+		'tera_event_sirjukas'		=> "Sirjuka's Gallery",
+		'tera_event_crucibleflame'	=> 'Crucible of Flame',
+		'tera_event_argoncorpus'	=> 'Argon Corpus',
+		'tera_event_manayascore'	=> "Manaya's Core",
+		'tera_event_layansprison'	=> "Lakan's Prison",
+		'tera_event_ghillieglade'	=> 'Ghillieglade',
 	),
 );
 

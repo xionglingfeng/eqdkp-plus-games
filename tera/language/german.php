@@ -29,7 +29,8 @@ $german_array = array(
 		5	=> 'Priester',
 		6	=> 'Zerstörer',
 		7	=> 'Zauberer',
-		8	=> 'Krieger'
+		8	=> 'Krieger',
+		9	=> 'Klingentänzer',
 	),
 	'races' => array(
 		0	=> 'Unknown',
@@ -48,7 +49,31 @@ $german_array = array(
 		4	=> 'Unterstützer'
 	),
 	'lang' => array(
-		'tera'	=> 'Tera Online',
+		'tera'						=> 'Tera Online',
+
+		// events
+		'tera_event_bastion'		=> 'Bastion Loks',
+		'tera_event_sinestral'		=> 'Anwesen der Arglist',
+		'tera_event_cultistrefuge'	=> 'Zuflucht der Kultisten',
+		'tera_event_necromancer'	=> 'Nekromantenkrypta',
+		'tera_event_sigiladstringo'	=> 'Siegel von Adstringo',
+		'tera_event_goldenlaby'		=> 'Goldenes Labyrinth',
+		'tera_event_akashashide'	=> 'Akashas Versteck',
+		'tera_event_acentsaravash'	=> 'Aufstieg von Saravash',
+		'tera_event_saleronsky'		=> 'Salerons Himmelsgarten',
+		'tera_event_suryatis'		=> 'Suryatis Gipfel',
+		'tera_event_ebontower'		=> 'Ebenholzturm',
+		'tera_event_labyterror'		=> 'Labyrinth des Schreckens',
+		'tera_event_kelsaiksnest'	=> 'Kelsaiks Nest',
+		'tera_event_fanekaprima'	=> 'Tempel von Kaprima',
+		'tera_event_balderstemple'	=> 'Balders Tempel',
+		'tera_event_templetemerity'	=> 'Temple der Verwegenheit',
+		'tera_event_sirjukas'		=> 'Terassen von Sirjuka',
+		'tera_event_crucibleflame'	=> 'Flammentiegel',
+		'tera_event_argoncorpus'	=> 'Argonenkorpus',
+		'tera_event_manayascore'	=> 'Manayas Herz',
+		'tera_event_layansprison'	=> 'Lakans Gefängnis',
+		'tera_event_ghillieglade'	=> 'Tarnlichtung',
 	),
 );
 

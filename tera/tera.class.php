@@ -22,7 +22,7 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('tera')) {
 	class tera extends game_generic {
-		public $version			= '0.1';
+		public $version			= '26.04';
 		protected $this_game	= 'tera';
 		protected $types		= array('classes', 'races', 'filters', 'roles');
 		protected $classes		= array();
@@ -68,6 +68,7 @@ if(!class_exists('tera')) {
 			6	=> '#91BC51',
 			7	=> '#E68C84',
 			8	=> '#DFBA74',
+			9	=> '#800080',
 		);
 
 		protected $glang		= array();
@@ -94,14 +95,38 @@ if(!class_exists('tera')) {
 			}
 		}
 		public function install($install=false){
-			
+			$this->game->resetEvents();
 
-			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
-			#if($install){
-			#}
-			return $info;
+			$arrEventIDs = array();
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_bastion'), 0, "lok.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_sinestral'), 0, "sinistral.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_cultistrefuge'), 0, "cultists.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_necromancer'), 0, "necromancer.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_sigiladstringo'), 0, "adstrino.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_goldenlaby'), 0, "goldenlab.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_akashashide'), 0, "askasha.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_acentsaravash'), 0, "saravash.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_saleronsky'), 0, "skygarden.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_suryatis'), 0, "suryati.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_ebontower'), 0, "ebontower.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_labyterror'), 0, "terror.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_kelsaiksnest'), 0, "kelsaiks.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_fanekaprima'), 0, "kaprina.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_balderstemple'), 0, "balders.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_templetemerity'), 0, "temerity.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_sirjukas'), 0, "sirjukas.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_crucibleflame'), 0, "crucible.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_argoncorpus'), 0, "argoncore.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_manayascore'), 0, "manayas.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_layansprison'), 0, "layan.png");
+			$arrEventIDs[] = $this->game->addEvent($this->glang('tera_event_ghillieglade'), 0, "ghillieglade.png");
+
+			$this->game->resetMultiDKPPools();
+			$this->game->resetItempools();
+			$intItempoolID = $this->game->addItempool("Default", "Default Itempool");
+
+			$this->game->addMultiDKPPool("Default", "Default MultiDKPPool", $arrEventIDs, array($intItempoolID));
 		}
 	}
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_tera', tera::$shortcuts);
 ?>
