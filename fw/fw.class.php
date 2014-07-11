@@ -22,7 +22,7 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('fw')) {
 	class fw extends game_generic {
-		public $version			= '1.0';
+		public $version			= '1.0.1';
 		protected $this_game	= 'fw';
 		protected $types		= array('classes', 'races', 'filters', 'roles');
 		protected $classes		= array();
@@ -70,15 +70,16 @@ if(!class_exists('fw')) {
 		);
 		
 		protected $class_colors = array(
-			0	=> '#000000',
-			1	=> '#fc0505',
-			2	=> '#21679c',
-			3	=> '#c8d41a',
-			4	=> '#448f94',
-			5	=> '#ab3393',
-			6	=> '#55c444',
-			7	=> '#942966',
-			8	=> '#c77125',
+			0	=> '#ff7fff',
+			1	=> '#05e6fa',
+			2	=> '#7d7d7d',
+			3	=> '#741bd4',
+			4	=> '#fc9b00',
+			5	=> '#f7ff00',
+			6	=> '#ffffff',
+			7	=> '#ff0000',
+			8	=> '#159e00',
+			9	=> '#5845ff',
 		);
 
 		protected $glang		= array();
