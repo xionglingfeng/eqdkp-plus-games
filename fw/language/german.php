@@ -30,6 +30,7 @@ $german_array = array(
 		6	=> 'Priester',
 		7	=> 'Vampir',
 		8	=> 'Barde',
+		9	=> 'Seelensammler',
 	),
 
 	'races' => array(

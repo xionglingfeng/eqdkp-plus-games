@@ -30,6 +30,7 @@ $english_array =  array(
 		6	=> 'Priest',
 		7	=> 'Vampire',
 		8	=> 'Bard',
+		9	=> 'Soul Reaper',
 	),
 
 	'races' => array(

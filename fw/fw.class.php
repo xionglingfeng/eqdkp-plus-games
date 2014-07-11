@@ -22,7 +22,7 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('fw')) {
 	class fw extends game_generic {
-		public $version			= '0.1';
+		public $version			= '1.0';
 		protected $this_game	= 'fw';
 		protected $types		= array('classes', 'races', 'filters', 'roles');
 		protected $classes		= array();
