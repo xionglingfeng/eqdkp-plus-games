@@ -4,15 +4,14 @@
  * License:		Creative Commons - Attribution-Noncommercial-Share Alike 3.0 Unported
  * Link:		http://creativecommons.org/licenses/by-nc-sa/3.0/
  * -----------------------------------------------------------------------
- * Began:		2009
  * Date:		$Date$
  * -----------------------------------------------------------------------
  * @author		$Author$
- * @copyright	2006-2011 EQdkp-Plus Developer Team
+ * @copyright	2006-2014 EQdkp-Plus Developer Team
  * @link		http://eqdkp-plus.com
  * @package		eqdkp-plus
  * @version		$Rev$
- * 
+ *
  * $Id$
  */
 
@@ -22,12 +21,13 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('guildwars2')) {
 	class guildwars2 extends game_generic {
-		public $version			= '0.1';
-		protected $this_game	= 'guildwars2';
-		protected $types		= array('classes', 'races');
-		protected $classes		= array();
-		protected $races		= array();
-		public $langs			= array('english', 'german');
+		protected static $apiLevel	= 20;
+		public $version				= '0.1';
+		protected $this_game		= 'guildwars2';
+		protected $types			= array('classes', 'races');
+		protected $classes			= array();
+		protected $races			= array();
+		public $langs				= array('english', 'german');
 
 		protected $class_dependencies = array(
 			array(
@@ -71,10 +71,9 @@ if(!class_exists('guildwars2')) {
 		protected $path			= '';
 		public $lang			= false;
 
-		public function install($install=false){
-		}
+		public function install($install=false){}
 		
-				protected function load_filters($langs){
+		protected function load_filters($langs){
 			return array();
 		}
 	}
