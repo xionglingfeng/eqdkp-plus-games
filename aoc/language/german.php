@@ -47,11 +47,18 @@ $german_array = array(
 		'evil'	=> 'Böse'
 	),
 	'lang' => array(
-		'aoc'				=> 'Age of Conan',
-		'rogue'				=> 'Schurke',
-		'soldier'			=> 'Soldat',
-		'mage'				=> 'Magier',
-		'priest'			=> 'Priester',
+		'aoc'							=> 'Age of Conan',
+		'rogue'							=> 'Schurke',
+		'soldier'						=> 'Soldat',
+		'mage'							=> 'Magier',
+		'priest'						=> 'Priester',
+		'uc_race'						=> 'Rasse',
+		'uc_class'						=> 'Klasse',
+
+		// Admin Settings
+		'core_sett_fs_gamesettings'		=> 'Age of Conan Einstellungen',
+		'uc_faction'					=> 'Fraktion',
+		'uc_faction_help'				=> 'Wähle die Standard-Fraktion',
 	),
 );
 ?>

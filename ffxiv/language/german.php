@@ -51,12 +51,19 @@ $german_array = array(
 		'tank'							=> 'Tank',
 		'support'						=> 'Heiler',
 		'damage_dealer'					=> 'Damage Dealer',
-		
+
 		// Profile information
 		'uc_gender'						=> 'Geschlecht',
 		'uc_male'						=> 'Männlich',
 		'uc_female'						=> 'Weiblich',
 		'uc_guild'						=> 'Gilde',
+		'uc_race'						=> 'Rasse',
+		'uc_class'						=> 'Klasse',
+
+		// Admin Settings
+		'core_sett_fs_gamesettings'		=> 'Final Fantasy XIV Einstellungen',
+		'uc_faction'					=> 'Fraktion',
+		'uc_faction_help'				=> 'Wähle die Standard-Fraktion',
 	),
 );
 ?>

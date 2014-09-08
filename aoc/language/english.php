@@ -47,11 +47,18 @@ $english_array = array(
 		'evil'	=> 'Evil'
 	),
 	'lang' => array(
-		'aoc'				=> 'Age of Conan',
-		'rogue'				=> 'Rogue',
-		'soldier'			=> 'Soldier',
-		'mage'				=> 'Mage',
-		'priest'			=> 'Priest',
+		'aoc'							=> 'Age of Conan',
+		'rogue'							=> 'Rogue',
+		'soldier'						=> 'Soldier',
+		'mage'							=> 'Mage',
+		'priest'						=> 'Priest',
+		'uc_race'						=> 'Race',
+		'uc_class'						=> 'Class',
+
+		// Admin Settings
+		'core_sett_fs_gamesettings'		=> 'Age of Conan Settings',
+		'uc_faction'					=> 'Faction',
+		'uc_faction_help'				=> 'Select the default faction',
 	),
 );
 ?>

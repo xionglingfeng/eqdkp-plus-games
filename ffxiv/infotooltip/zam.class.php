@@ -16,8 +16,8 @@
  * $Id$
  */
 
-if(!class_exists('ffxiv_zam')) {
-	class ffxiv_zam extends itt_parser {
+if(!class_exists('zam')) {
+	class zam extends itt_parser {
 		public static $shortcuts = array('pdl', 'puf' => 'urlfetcher', 'pfh' => array('file_handler', array('infotooltips')));
 
 		public $supported_games = array('ffxiv');

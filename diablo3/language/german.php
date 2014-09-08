@@ -35,6 +35,7 @@ $german_array = array(
 	),
 	'lang' => array(
 		'diablo3'					=> 'Diablo 3',
+		'uc_class'					=> 'Klasse',
 	),
 );
 ?>

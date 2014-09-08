@@ -47,6 +47,11 @@ $english_array = array(
 	),
 	'lang' => array(
 		'guildwars2'				=> 'Guildwars 2',
+		'uc_race'					=> 'Race',
+		'uc_class'					=> 'Class',
+
+		// Admin Settings
+		'core_sett_fs_gamesettings'	=> 'Guildwars 2 Settings',
 	),
 );
 ?>
