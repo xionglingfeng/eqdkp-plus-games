@@ -50,6 +50,8 @@ $english_array =  array(
 	),
 	'lang' => array(
 		'tera'						=> 'Tera Online',
+		'uc_race'					=> 'Race',
+		'uc_class'					=> 'Class',
 
 		// events
 		'tera_event_bastion'		=> 'Bastion of Lok',

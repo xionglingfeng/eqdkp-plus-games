@@ -64,7 +64,9 @@ $german_array = array(
 	),
 
 	'lang' => array(
-		'sto'			=> 'Star Trek Online',
+		'sto'						=> 'Star Trek Online',
+		'uc_race'					=> 'Rasse',
+		'uc_class'					=> 'Klasse',
 	),
 );
 
