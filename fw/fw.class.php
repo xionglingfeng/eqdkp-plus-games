@@ -95,6 +95,7 @@ if(!class_exists('fw')) {
 					'lang'			=> 'uc_gender',
 					'options'		=> array('Male' => 'uc_male', 'Female' => 'uc_female'),
 					'undeletable'	=> true,
+					'tolang'		=> true
 				),
 				'guild'	=> array(
 					'type'			=> 'text',
