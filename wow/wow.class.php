@@ -35,7 +35,7 @@ if(!class_exists('wow')) {
 		protected $professions		= array();
 		public $objects				= array('bnet_armory');												// eventually there are some objects (php-classes) in this game
 		public $no_reg_obj			= array('bnet_armory');												// a list with all objects, which dont need registry
-		public $langs				= array('english', 'german');										// in which languages do we have information?
+		public $langs				= array('english', 'german', 'chinesesimplified');										// in which languages do we have information?
 		public $importers 			= array();
 			
 		protected $ArrInstanceCategories = array(
